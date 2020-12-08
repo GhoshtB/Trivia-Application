@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <data>
+        <variable
+            name="users"
+            type="com.example.triviaapplication.model.User" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/padding_3"
+    app:contentPadding="@dimen/padding_5"
+    android:layout_margin="@dimen/padding_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@{`Game : `+`   ` +`  ` + users.time}"
+            android:layout_margin="@dimen/padding_5"
+            android:textSize="@dimen/text_medium"
+            android:padding="@dimen/padding_5"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@{`Name : ` + users.name}"
+            android:layout_margin="@dimen/padding_5"
+            android:textSize="@dimen/text_medium"
+            android:padding="@dimen/padding_5"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Who is the best cricketer in the world?"
+            android:layout_margin="@dimen/padding_5"
+            android:textSize="@dimen/text_medium"
+            android:padding="@dimen/padding_5"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/tvcricketer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="@{`Answer : `+ users.player}"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_margin="@dimen/padding_5"
+            android:textSize="@dimen/text_small"
+            android:padding="@dimen/padding_5"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:text="What are the colors in the national flag?"
+            android:layout_margin="@dimen/padding_5"
+            android:textSize="@dimen/text_medium"
+            android:padding="@dimen/padding_5"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:id="@+id/tvflag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="@{`Answer : `+ users.flagColor}"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_margin="@dimen/padding_5"
+            android:textSize="@dimen/text_small"
+            android:padding="@dimen/padding_5"
+            android:textColor="@android:color/black"
+            />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.SplashFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <data>
+        <variable
+            name="users"
+            type="com.example.triviaapplication.model.User" />
+
+        <variable
+            name="fragment"
+            type="com.example.triviaapplication.fragments.SplashFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+
+            android:id="@+id/tvSplash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:letterSpacing="0.3"
+            android:text="Trivia Application"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="@dimen/text_ext_large"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/llName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:fontFamily="@font/poppins_medium"
+                android:text="What is your name?"
+                android:layout_margin="@dimen/padding_5"
+                android:textSize="@dimen/text_medium"
+                android:padding="@dimen/padding_5"
+                android:textColor="@android:color/black"
+                />
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_40"
+                android:hint="Enter Name"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_margin="@dimen/padding_5"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:padding="@dimen/padding_5"/>
+
+            <Button
+                android:id="@+id/btnName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/padding_40"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_5"
+                android:text="Next"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_margin="@dimen/padding_5"
+                android:textColor="@android:color/white"
+                android:background="@color/purple_200"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llcricketer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="@dimen/padding_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Who is the best cricketer in the world?"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@android:color/black"
+                />
+
+            <RadioGroup
+                android:padding="@dimen/padding_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_margin="@dimen/padding_5"
+                android:id="@+id/rgcricketer" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sachin Tendulkar"
+                    android:layout_margin="@dimen/padding_5"
+                    android:id="@+id/rdSachin"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="@dimen/text_small"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Virat Kolli"
+                    android:layout_margin="@dimen/padding_5"
+                    android:fontFamily="@font/poppins_medium"
+                    android:id="@+id/rdVirat"
+                    android:textSize="@dimen/text_small"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adam Gilchirst"
+                    android:layout_margin="@dimen/padding_5"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="@dimen/text_small"
+                    android:id="@+id/rdAdam"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jacques Kallis"
+                    android:layout_margin="@dimen/padding_5"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="@dimen/text_small"
+                    android:id="@+id/rdJacques"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnBPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/padding_40"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="@dimen/padding_5"
+                android:text="Next"
+                android:layout_margin="@dimen/padding_5"
+                android:textColor="@android:color/white"
+                android:background="@color/purple_200"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llflag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/padding_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:text="What are the colors in the Indian national flag? (More Than 1)"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@android:color/black"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="White"
+                android:onClick="@{()->fragment.callFunction()}"
+                android:fontFamily="@font/poppins_medium"
+                android:id="@+id/rdWhite"
+                android:layout_margin="@dimen/padding_5"
+                android:textSize="@dimen/text_small"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yellow"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:id="@+id/rdYellow"
+                android:textSize="@dimen/text_small"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orange"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/text_small"
+                android:id="@+id/rdOrange"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Green"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/text_small"
+                android:id="@+id/rdGreen"/>
+
+            <Button
+                android:id="@+id/btnflag"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/padding_40"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_5"
+                android:text="Next"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/white"
+                android:background="@color/purple_200"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHISTORY"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Here are the answers selected:"
+                android:textSize="@dimen/text_large"
+                android:padding="@dimen/padding_5"
+                android:textColor="@android:color/black"
+                />
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:text="What is your name?"
+                android:textSize="@dimen/text_medium"
+                android:padding="@dimen/padding_5"
+                android:textColor="@android:color/black"
+                />
+
+            <TextView
+               android:id="@+id/tvcricketer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+android:text="Who is the best cricketer in the world?
+"
+                android:textSize="@dimen/text_medium"
+                android:padding="@dimen/padding_5"
+                android:textColor="@android:color/black"
+                />
+
+            <TextView
+                android:id="@+id/tvflag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_margin="@dimen/padding_5"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Here are the answers selected:"
+                android:textSize="@dimen/text_medium"
+                android:padding="@dimen/padding_5"
+                android:textColor="@android:color/black"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnFINISH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_40"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_5"
+                    android:text="FINISH"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@color/purple_200"/>
+
+                <Button
+                    android:id="@+id/btnHISTORY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/padding_40"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_5"
+                    android:text="HISTORY"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_margin="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@color/purple_200"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
